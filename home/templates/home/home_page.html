@@ -6,8 +6,18 @@
 {% block content %}
 
 {% if page.title == "Home" %}
+<div class="container-fluid video-container">
+  <div class="video">
+
+  <iframe width="854" height="480"  src="https://www.youtube.com/embed/dPfEqqch_9s?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <a class="scrollLink"></a>
+</div>
+
+
+
 <!-- start slider -->
-<div class="home-p">
+<div class="home-p text-container " id="info" >
   <div class="container">
 
     <div class="tex">
@@ -18,20 +28,13 @@
       </p>
       <button type="button" name="button" onclick="location.href = '/ehsasak';" data-aos="zoom-in-right"> اعرف أكثر </button>
     </div>
-    <a class="scrollLink"></a>
   </div>
 </div>
 <!-- end slider-->
 
-<div class="video">
-
-  <div class="container">
-    <iframe width="100%" height="500px" src="https://www.youtube.com/embed/dPfEqqch_9s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</div>
 
 
-<div class="about" id="about">
+<div class="about">
   <div class="container content">
     <div class="row">
       <div class="col-md-4 counter-content">

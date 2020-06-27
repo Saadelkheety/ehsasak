@@ -126,11 +126,11 @@ ul, ol {
   background-color: #392d2d;
   color: #fff;
 }
-.home-p .scrollLink {
+.video-container .scrollLink {
   background-image: url(/static/img/p-1.png);
   display: block;
-  width: 31px;
-  height: 48px;
+  width: 40px;
+  height: 60px;
   border-radius: 37px;
   border: 2px solid #fff;
   border-top-color: white;
@@ -210,8 +210,28 @@ ul, ol {
   }
 }
 .video {
-  background-color: #000;
-  padding: 50px 0;
+    position: relative;
+    padding-bottom: 75%; /* 16:9 */
+    height: 0;
+  }
+
+  .video iframe {
+  position: absolute;
+  right: 50%;
+  transform: translate(50%, 0);
+  padding: 10px;
+  max-width: 1100px;
+  max-height: 480px;
+}
+
+.video-container{
+  height: 100vh;
+  background-image: url(/static/img/2.png);
+  padding-top: 60px;
+  position: relative;
+}
+.text-container {
+  position: relative;
 }
 
 .blog {
