@@ -8,7 +8,7 @@ DEBUG = True
 SECRET_KEY = os.getenv('SECRET_KEY', 'great secret key')
 
 # SECURITY WARNING: define the correct hosts in production!
-ALLOWED_HOSTS = ['127.0.0.1', '138.197.6.134', 'beldezign.us', 'www.beldezign.us']
+ALLOWED_HOSTS = ['*']
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
