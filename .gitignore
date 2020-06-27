@@ -13,3 +13,4 @@ apibuffet/venv/
 apibuffet/logs/
 venv/
 apibuffet/.env
+LightsailDefaultKey-eu-west-3.pem

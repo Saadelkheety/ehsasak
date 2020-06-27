@@ -99,7 +99,7 @@ WSGI_APPLICATION = 'portofolio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, '../ehsasak_db/db.sqlite3'),
     }
 }
 
@@ -163,8 +163,8 @@ MEDIA_URL = '/media/'
 
 # Wagtail settings
 
-WAGTAIL_SITE_NAME = "portofolio"
+WAGTAIL_SITE_NAME = "Ehsasak"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'https://www.beldezign.us'
+BASE_URL = 'https://ehsasak-neama.com'
