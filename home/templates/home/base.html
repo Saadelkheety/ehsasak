@@ -1,0 +1,141 @@
+{% load static wagtailcore_tags wagtailimages_tags %}
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+
+  <link href="https://fonts.googleapis.com/css?family=Cairo:600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/style.scss' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>{% block title %}حملة احساسك نعمه{% endblock title %}</title>
+</head>
+
+<body>
+  <!-- start nav-->
+
+  <nav class="fixed-top navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container-fluid">
+
+      <a class="navbar-brand lead" href="#"><img src="/static/img/1.png" /></a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse  " id="navbarSupportedContent">
+
+        <ul class="navbar-nav mr-auto">
+
+
+          <li class="nav-item ">
+            <a class="nav-link" href="/"> الرئيسية <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/ehsasak"> إحساسك نعمة </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/news"> منشورات وأخبار </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/blog"> مدونة </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/hospital"> المستشفى العائم </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/doctors"> سفراء </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/compain"> القوافل </a>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end nav-->
+  <div class="main">
+    {% block content %}
+    Developed by Saad Elkheety
+    {% endblock content %}
+  </div>
+  <!-- start footer-->
+  <div class="contact" id="contact">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-6 col-lg-6">
+          <a class="mg" href="#"><img src="/static/img/1.png" /></a>
+          <p>
+            احساسك نعمة مش مجرد شعار، دستور حياة بنعيش بيه كل يوم سواء أدركنا ده أو لسه..
+            ولأننا في إيفا فارما مؤمنين بكده، اتعاونّا مع وزارة الصحة المصرية، واطلقنا حملة احساسك نعمة، اللي هدفنا فيها نشر الوعي بأهمية الجهاز العصبي الطرفي في دعم حاسة الإحساس في جسم الإنسان..
+          </p>
+        </div>
+
+
+        <div class="col-sm-6 col-lg-6">
+          <div class="contact-2">
+            <h5> تواصل معنا </h5>
+            <ul class="col list-unstyled ">
+              <li> <i class="fas fa-envelope"><bdi dir="ltr"> </i>
+                <a href="mailto:e7sasakne3ma@gmail.com?subject=contact"> e7sasakne3ma@gmail.com</a> </bdi> </li>
+            </ul>
+
+            <ul class="col list-unstyled  flt">
+              <li><i class="fab fa-facebook-square" onclick="location.href ='https://www.facebook.com/27saskne3ma'"></i></li>
+              <li><i class="fab fa-instagram" onclick="location.href ='https://www.instagram.com/ahsask_nema/'"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end footer-->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+  <script src="/static/js/jquery.counterup.min.js"></script>
+  <script src="/static/js/script.js"></script>
+
+
+  <script>
+    jQuery(document).ready(function($) {
+      $('.counter').counterUp({
+        delay: 10,
+        time: 1000
+      });
+    });
+  </script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    AOS.init({
+      once: true,
+    });
+  </script>
+
+</body>
+
+</html>

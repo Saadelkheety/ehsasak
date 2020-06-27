@@ -1,0 +1,76 @@
+{% extends "home/base.html" %}
+{% load wagtailcore_tags wagtailroutablepage_tags wagtailimages_tags %}
+
+  {% block content %}
+{% image page.header_image original as header_image %}
+<!-- style="background-image: url({{ header_image.url }});" -->
+  <header>
+          <div class="container">
+            <div class="text-center hero-text">
+                    <h1>{{ page.title }}</h1>
+        </header>
+
+  <main id="main">
+    <section>
+      <div class="container">
+
+        <div class="blog-content">
+          {{ page.body|richtext }}
+        </div>
+        <hr>
+      {% with categories=page.categories.all %}
+        {% if categories %}
+        <div class="mt-5" dir="ltr">
+          <h5 class="d-inline">Categories:</h5>
+          <ul class="list-inline d-inline">
+            {% for category in categories %}
+              <li class="list-inline-item">
+                <a href="{% routablepageurl blog_page 'post_by_category' category.slug %}">{{ category.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      {% endwith %}
+
+      {% if page.tags.all.count %}
+        <div dir="ltr">
+            <h5 class="d-inline">Tags:</h5>
+            {% for tag in page.tags.all %}
+                <a href="{% routablepageurl blog_page "post_by_tag" tag.slug %}">{{ tag }}</a>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+      <p class="col-md-10 text-center mx-auto"><a href="{{ page.get_parent.url }}">
+      <img src="/static/img/return.png" width="40px" alt="return" title="عودة"></a></p>
+      <hr>
+
+      <div class="mt-5 mb-5" id="disqus_thread" dir="ltr"></div>
+        <script>
+
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+        var disqus_config = function () {
+        this.page.url = "https://ehsasak-neama.com{% pageurl page %}";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "{% pageurl page %}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://ehsasak-neama.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+      </div>
+    </section>
+  </main>
+
+  </script>
+{% endblock %}

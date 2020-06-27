@@ -1,0 +1,66 @@
+nav{
+  background-image: linear-gradient(90deg, $orangecolor, $redcolor);
+  margin: 0;
+  padding: 0 !important;
+
+  img{
+    max-width: 70px;
+  }
+
+  .navbar-brand{
+    margin: 0;
+  }
+
+  .nav-link {
+   color: #fff !important;
+   font-size: 20px;
+   font-family: $cairo;
+   transition-duration: 500ms;
+  }
+
+  .nav-link:hover{
+    color: #525252 !important;
+  }
+}
+
+
+header{
+  text-align: start;
+  height:400px;
+  background-image: url(/static/img/2.png);
+  margin-bottom: 50px;
+h1{
+  font-family: $cairo;
+  padding-top: 150px;
+  color: #fff;
+  position: relative;
+
+&::after{
+  content: "";
+  position: absolute;
+  right: 2px;
+  width: 5%;
+  height: 5px;
+  background-color: #fff;
+  bottom: -20px;
+}
+}
+
+}
+
+@media (max-width: 600px){
+header{
+text-align: center;
+
+
+ h1::after{
+  content: "";
+  position: absolute;
+  right: 45%;
+  width: 5%;
+  height: 5px;
+  background-color: #fff;
+  bottom: -20px;
+}
+}
+}

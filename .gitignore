@@ -1,0 +1,15 @@
+logs/
+*.pyc
+.idea/*
+__pycache__
+__pycache__/
+utils/
+*.py[cod]
+*$py.class
+Pipenv
+Pipenv.lock
+.vscode/
+apibuffet/venv/
+apibuffet/logs/
+venv/
+apibuffet/.env
